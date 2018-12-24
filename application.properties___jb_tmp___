@@ -1,0 +1,3 @@
+db.url=jdbc:mysql://localhost:3306/Zoopark
+db.username=root
+db.password=12581258

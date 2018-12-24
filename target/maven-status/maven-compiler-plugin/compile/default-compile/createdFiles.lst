@@ -1,0 +1,4 @@
+app\model\DAO.class
+ManageBean.class
+app\entities\Animal.class
+SessionBean.class

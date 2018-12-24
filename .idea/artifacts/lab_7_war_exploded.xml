@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="lab 7:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/lab_7_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="lab 7/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="lab 7" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.6.1" />
+          <element id="library" level="project" name="Maven: com.sun.faces:jsf-impl:2.1.7" />
+          <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.10" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.13" />
+          <element id="library" level="project" name="Maven: org.apache.myfaces.trinidad:trinidad-api:2.2.1" />
+          <element id="library" level="project" name="Maven: com.sun.faces:jsf-api:2.1.7" />
+          <element id="library" level="project" name="Maven: org.apache.myfaces.trinidad:trinidad-impl:2.2.1" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

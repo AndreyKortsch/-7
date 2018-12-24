@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns:="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:tr="http://myfaces.apache.org/trinidad" xmlns:d="http://xmlns.jcp.org/jsf/core">
+<head>
+    <title>My table</title>
+</head>
+<body>
+<d:view>
+    <h:form>
+        <tr:table binding="#{manageBean.table}"
+                  value="#{dao.listAllAnimal}" var="client"
+                  rowSelection="multiple">
+            <d:facet name="footer">
+                <h:commandButton action="#{manageBean.delete}"
+                                 value="Удалить"/>
+            </d:facet>
+            <tr:column sortProperty="animal_ID" sortable="true">
+                <d:facet name="header">
+                    <h:outputText value="№ животного"/>
+                </d:facet>
+                <h:inputText value="#{client.animal_ID}"/>
+            </tr:column>
+            <tr:column sortProperty="name" sortable="true">
+                <d:facet name="header">
+                    <h:outputText value="Имя"/>
+                </d:facet>
+                <h:commandLink action="details" value="#{client.name}">
+                    <d:param name="number" value="#{client.number}"/>
+                </h:commandLink>
+            </tr:column>
+            <tr:column sortProperty="vids_ID" sortable="true">
+                <d:facet name="header">
+                    <h:outputText value="№ вида"/>
+                </d:facet>
+                <h:inputText value="#{client.vids_ID}"/>
+            </tr:column>
+            <tr:column sortProperty="number" sortable="true">
+                <d:facet name="header">
+                    <h:outputText value="№ вольера"/>
+                </d:facet>
+                <h:inputText value="#{client.number}"/>
+            </tr:column>
+            <tr:column sortProperty="date" sortable="true">
+                <d:facet name="header">
+                    <h:outputText value="Дата"/>
+                </d:facet>
+                <h:inputText value="#{client.date}"/>
+            </tr:column>
+        </tr:table>
+    </h:form>
+</d:view>
+</body>
+</html>
+

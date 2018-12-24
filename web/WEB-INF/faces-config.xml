@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+    http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <managed-bean>
+        <managed-bean-name>manageBean</managed-bean-name>
+        <managed-bean-class>ManageBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+   <managed-bean>
+        <managed-bean-name>sessionBean</managed-bean-name>
+        <managed-bean-class>SessionBean</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>dao</managed-bean-name>
+        <managed-bean-class>app.model.DAO</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>animal</managed-bean-name>
+        <managed-bean-class>app.entities.Animal</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <navigation-rule>
+        <from-view-id>/table.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>details</from-outcome>
+            <to-view-id>/details.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/details.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>result</from-outcome>
+            <to-view-id>/table.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <application>
+        <default-render-kit-id>
+            org.apache.myfaces.trinidad.core
+        </default-render-kit-id>
+    </application>
+</faces-config>
